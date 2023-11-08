@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.heart {
+    width: 100px;
+    height: 90px;
+    background-image: url('Heart_corazón.svg.png');
+    background-size: cover;
+    animation: heartbeat 1.5s infinite linear;
+}
+.heart:nth-child(odd) {
+    animation-delay: 0.5s;
+}
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(0.95);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(0.85);
+    }
+}
